@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>HR ERP System</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="hrhome">Home</a></li>
+            <li><a href="add_employee">Add Employee</a></li>
+            <li><a href="show_employee">Show Employee</a></li>
+            <li><a href="searchemployee">Search Emp</a></li>
+            <li><a href="logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="main">
+
+            <h2>Add Employee</h2>
+
+            <form action="update_employee" method="post">
+                <input type="text" value="{{data[0][0]}}" name="employee_id">
+                <input type="text" value="{{data[0][1]}}" name="name">
+                <input type="email" value="{{data[0][2]}}" name="email">
+                <input type="number" value="{{data[0][3]}}" name="phone">
+                <input type="text" value="{{data[0][4]}}" name="address">
+                <input type="text" value="{{data[0][5]}}" name="department">
+                <input type="number" value="{{data[0][6]}}" name="salary">
+
+
+                <button>update Employee</button>
+
+
+            </form>
+            <a href="update_employee?id={{data[0][0]}}">delete</a>
+
+        </div>
+
+
+        <div class="sidebar">
+            <img src="profile.png">
+            <h3>Administrator</h3>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

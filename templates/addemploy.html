@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>HR ERP System</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="hrhome">Home</a></li>
+            <li><a href="add_employee">Add Employee</a></li>
+            <li><a href="show_employee">Show Employee</a></li>
+            <li><a href="searchemployee">Search Emp</a></li>
+            <li><a href="logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="main">
+
+            <h2>Add Employee</h2>
+
+            <form action="add_employee" method="post">
+                <input type="text" placeholder="Employee ID" name="employee_id">
+                <input type="text" placeholder="Employee Name" name="name">
+                <input type="email" placeholder="Email" name="email">
+                <input type="number" placeholder="Phone" name="phone">
+                <input type="text" placeholder="Address" name="address">
+                <input type="text" placeholder="Department" name="department">
+                <input type="number" placeholder="Salary" name="salary">
+
+                <button>Add Employee</button>
+            </form>
+            {% if save %}
+            <p>{{ save }}</p>
+            {% endif %}
+
+        </div>
+
+        <div class="sidebar">
+            <img src="profile.png">
+            <h3>Administrator</h3>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

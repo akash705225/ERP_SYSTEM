@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>{{m}}</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="hrhome">Home</a></li>
+            <li><a href="add_employee">Add Employee</a></li>
+            <li><a href="show_employee">Show Employee</a></li>
+            <li><a href="search_employee">Search Emp</a></li>
+            <li><a href="logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="main">
+            <h2>Welcome Administrator...</h2>
+        </div>
+
+        <div class="sidebar">
+            <img src="profile.png">
+            <h3>Administrator</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>
